@@ -13,9 +13,23 @@ class ViewController: UIViewController {
     var ratingHusky: Int = 0
     var ratingHouse: Int = 0
     
+    var pictureList: [String]!
+    var ratings: [Int]!
+    var selectedPictuer: Int!
+    
+    @IBOutlet weak var picturePicker: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // init picker view
+        picturePicker.dataSource = self
+        picturePicker.delegate = self
+        
+        // init data
+        pictureList = ["Husky", "Door"]
+        ratings = [0, 0]
+        selectedPictuer = 0
     }
 
     // Sending values to the Third View Controller before its view is load
@@ -27,6 +41,10 @@ class ViewController: UIViewController {
         } else if segue.identifier == "showHouse" {
             let controller = segue.destination as! FourthViewController
             controller.rating = ratingHouse
+        } else if segue.identifier == "showPicture" {
+            let controller = segue.destination as! FifthViewController
+            controller.rating = ratings[selectedPictuer]
+            controller.picture = pictureList[selectedPictuer]
         }
     }
     // Reading properties from the source via unwind segue function
@@ -38,8 +56,31 @@ class ViewController: UIViewController {
         } else if segue.identifier == "removeHouse" {
             let controller = segue.source as! FourthViewController
             ratingHouse = controller.rating
+        } else if segue.identifier == "goBack" {
+            let controller = segue.source as! FifthViewController
+            ratings[selectedPictuer] = controller.rating
         }
+    }
+    
+    @IBAction func getPictureBtnPressed(_ sender: UIButton) {
+        selectedPictuer = picturePicker.selectedRow(inComponent: 0)
+        performSegue(withIdentifier: "showPicture", sender: self)
     }
     
 }
 
+extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    //MARK: - Picker Data Source
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pictureList.count
+    }
+    
+    //MARK: - Picker Delegate
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pictureList[row]
+    }
+}

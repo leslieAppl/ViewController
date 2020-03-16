@@ -17,6 +17,7 @@
 		CEA8544A241E5BD50070D8DE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA85449241E5BD50070D8DE /* FirstViewController.swift */; };
 		CEA8544C241E5BE40070D8DE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8544B241E5BE40070D8DE /* SecondViewController.swift */; };
 		CEA8544E241F12000070D8DE /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8544D241F12000070D8DE /* FourthViewController.swift */; };
+		CEA85450241F3D0F0070D8DE /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA8544F241F3D0F0070D8DE /* FifthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CEA85449241E5BD50070D8DE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		CEA8544B241E5BE40070D8DE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CEA8544D241F12000070D8DE /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		CEA8544F241F3D0F0070D8DE /* FifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				CEA8544B241E5BE40070D8DE /* SecondViewController.swift */,
 				CEA85447241E5B810070D8DE /* ThirdViewController.swift */,
 				CEA8544D241F12000070D8DE /* FourthViewController.swift */,
+				CEA8544F241F3D0F0070D8DE /* FifthViewController.swift */,
 				CEA85439241DE3800070D8DE /* Main.storyboard */,
 				CEA8543C241DE3800070D8DE /* Assets.xcassets */,
 				CEA8543E241DE3800070D8DE /* LaunchScreen.storyboard */,
@@ -154,6 +157,7 @@
 				CEA8544A241E5BD50070D8DE /* FirstViewController.swift in Sources */,
 				CEA85438241DE3800070D8DE /* ViewController.swift in Sources */,
 				CEA8544E241F12000070D8DE /* FourthViewController.swift in Sources */,
+				CEA85450241F3D0F0070D8DE /* FifthViewController.swift in Sources */,
 				CEA85434241DE3800070D8DE /* AppDelegate.swift in Sources */,
 				CEA85448241E5B810070D8DE /* ThirdViewController.swift in Sources */,
 				CEA85436241DE3800070D8DE /* SceneDelegate.swift in Sources */,
